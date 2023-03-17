@@ -1,0 +1,11 @@
+immersive kuch kuch svg type h
+https://codepen.io/GreenSock/pen/aYYOdN/
+
+horizontal scroll
+https://codepen.io/oldskool123/pen/mdrrbyo?anon=true
+
+overlap scroll
+https://codepen.io/GreenSock/pen/WNzLeWX
+
+infinite scroll
+https://codepen.io/Mishra_jii/pen/ZEMRROJ
