@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+    Loader
+--------------------------------------------------------------*/
+
+.pre-loader {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999991;
+    background-color: var(--wdtBodyBGColor);
+    transform: scale(1.5);
+}
+
+.loader-inner {
+  text-transform:uppercase;
+
+  width:100%;
+  text-align:center;
+  line-height:50px;
+  margin:auto;
+  position:absolute;
+  left:0;right:0;top:50%;
+  transform:translateY(-50%);
+}
+
+
+
+.loading-cube {
+  margin: auto;
+  font-size: 24px;
+  height: 1em;
+  width: 1em;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-spin 1.5s infinite ease-in-out alternate both;
+}
+
+.cube-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-style: preserve-3d;
+}
+.cube-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--wdtPrimaryColor);
+  transform: translatez(0.5em);
+  animation: cube-explode 1.5s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+.cube-slide:nth-child(1) {
+  transform: rotatey(90deg);
+}
+
+.cube-slide:nth-child(2) {
+  transform: rotatey(180deg);
+}
+
+.cube-slide:nth-child(3) {
+  transform: rotatey(270deg);
+}
+
+.cube-slide:nth-child(4) {
+  transform: rotatey(360deg);
+}
+
+.cube-slide:nth-child(5) {
+  transform: rotatex(90deg);
+}
+
+.cube-slide:nth-child(6) {
+  transform: rotatex(270deg);
+}
+
+@keyframes cube-spin {
+  0% {
+    transform: rotatex(35.264deg) rotatey(45deg);
+  }
+  100% {
+    transform: rotatex(35.264deg) rotatey(405deg);
+  }
+}
+@keyframes cube-explode {
+  0% {
+    transform: translatez(0.5em);
+  }
+  50% {
+    transform: translatez(0.75em);
+  }
+  100% {
+    transform: translatez(0.5em);
+  }
+}
+
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+    .loader-inner .loader-text:after { background-color: var(--wdtPrimaryColor); }
+
+
+/*--------------------------------------------------------------
+    Responsive
+--------------------------------------------------------------*/
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+
+/* Common Styles for the devices below 479px width */
+
+@media only screen and (max-width: 479px) {
+
+}
